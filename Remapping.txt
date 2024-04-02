@@ -1,0 +1,10 @@
+@chainlink/contracts/=lib/chainlink-brownie-contracts/contracts/
+chainlink-brownie-contracts/=lib/chainlink-brownie-contracts/
+ds-test/=lib/forge-std/lib/ds-test/src/
+forge-std/=lib/forge-std/src/
+foundry-devops/=lib/foundry-devops/
+
+
+--rpc-url $(SEPOLIA_RPC_URL) --private-key $(PRIVATE_KEY) --broadcast --verify --etherscan-api-key $(ETHERSCAN_API_KEY) -vvvv
+
+ @forge script script/DeployFundMe.s.sol:DeployFundMe --rpc-url $(SEPOLIA_RPC_URL) --private-key $(PRIVATE_KEY) --broadcast --verify --etherscan-api-key $(ETHERSCAN_API_KEY) -vvvv
